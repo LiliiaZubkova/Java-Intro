@@ -1,5 +1,7 @@
 package Lesson2;
 
+import java.util.Scanner;
+
 class Person {
     @Override
     public boolean equals(Object o) {
@@ -13,7 +15,7 @@ class Person {
         return secondName != null ? secondName.equals(person.secondName) : person.secondName == null;
     }
 
-    @Override
+   @Override
     public int hashCode() {
         int result = firstName != null ? firstName.hashCode() : 0;
         result = 31 * result + (secondName != null ? secondName.hashCode() : 0);
@@ -47,10 +49,11 @@ class Person {
         System.out.println(count + " class loading.");
     }
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Person p1 = new Person("Ivan", "Ivanov", 58);
-        Person p2 = new Person("Anna", "Ivanova", 30);
+        Person p2 = new Person("Anna", "Ivanova", 35);
         Person p3 = new Person("Anna", "Ivanova", 35);
+        Person p4 = new Person("Petr", "Petrov", 40);
 
         System.out.println(p1.firstName + " " + p2.secondName + " " + p3.age);
         System.out.println(p1.equals(p2));
