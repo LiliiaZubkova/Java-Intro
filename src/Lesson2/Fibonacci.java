@@ -3,7 +3,7 @@ package Lesson2;
 import java.util.Scanner;
 
 public class Fibonacci {
-    public static void main(String[] args) {
+    public static void printFibonacciNumbers () {
         Scanner qnt = new Scanner(System.in);
         System.out.println("Please, put any integer number: ");
         int n = qnt.nextInt();
@@ -21,6 +21,10 @@ public class Fibonacci {
             i++;
             System.out.println(" " + fib);
         }
+    }
+
+    public static void main(String[] args) {
+        printFibonacciNumbers ();
+        }
 
     }
-}
